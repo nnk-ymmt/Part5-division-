@@ -36,3 +36,44 @@ final class ViewController: UIViewController {
         }
     }
 }
+
+
+
+// 解答例
+
+// チェック項目を1箇所にまとめる
+//enum ValidationResult {
+//    case valid
+//    case invalid(String)
+//}
+//
+//@IBAction func calcButton(_ sender: Any) {
+//    switch validate() {
+//    case .valid:
+//        break // 何もしないで次の処理へ
+//    case let .invalid(message):
+//        alert(message: message)
+//        return // ここで終了
+//    }
+//}
+//
+//func alert(message:String){
+//    let alert = UIAlertController(title: "課題5", message: message, preferredStyle: .alert)
+//    let ok = UIAlertAction(title: "OK", style: .default, handler: nil)
+//    alert.addAction(ok)
+//    present(alert,animated:true ,completion: nil)
+//}
+//
+//private func validate() -> ValidationResult {
+//    if textField1.text == "" {
+//        return .invalid("割られる数を入力してください")
+//    } else if textFiled2.text == "" {
+//        return .invalid("割る数を入力してください")
+//    } else {
+//        if Float(textFiled2.text ?? "") == 0 {
+//            return .invalid("割る数には0を入力しないでください")
+//        } else {
+//            return .valid
+//        }
+//    }
+//}
