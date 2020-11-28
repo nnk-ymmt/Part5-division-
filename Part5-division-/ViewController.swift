@@ -39,6 +39,21 @@ final class ViewController: UIViewController {
 
 
 
+// 改善点
+
+// Alertのtitleとして使うものとボタンのtitleとして使うものは同列にしない
+// Alertのenumはswitchしたい訳ではないので、やるとしてもstatic let
+//enum Message {
+//    static let inputDividend = "割られる数を入力してください"
+//    static let inputDivisor = "割る数を入力してください"
+//    static let doNotInputZeroForDivisor = "割る数には0を入力しないで下さい"
+//}
+// Message.まで入れると入力補完されるのでcaseと同じメリットを享受できる
+// 文言をまとめたいという観点で言うと、NSLocalizedStringに書くことが多い（ローカライズ対応する為）
+// .rawValueを書かなくてよくなる
+// 現状だとlet message = Alert.MessageType(rawValue: "割られる数を入力してください")の様なコードが書けるが
+// これが有用なケースはあまり無さそう
+
 // 解答例
 
 // チェック項目を1箇所にまとめる
